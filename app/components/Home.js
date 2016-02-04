@@ -10,15 +10,11 @@ export default class Home extends Component {
     const props = this.props;
     const {parts} = this.props
     return (
-        <div className={"container " + styles["container"]}>
-          {console.log(parts.currentPart)}
-          <Parts {...{initialValues:parts.currentPart, ...props}}></Parts>
-          <SearchResult {...{results:parts.results, showResults: parts.management.showResults, ...props}}></SearchResult>:
-          
-
-          <h2>Home</h2>
-          <Link to="/counter">to Counter</Link>
-        </div>
+      <div className={"container " + styles["container"]}>
+        {console.log(parts.currentPart)}
+        <Parts {...{initialValues:parts.currentPart, ...props}}></Parts>
+        <SearchResult {...{results:parts.results, showResults: parts.management.showResults, ...props}}></SearchResult>:
+      </div>
     );
   }
 }

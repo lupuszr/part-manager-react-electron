@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Home from '../components/Home';
+import { bindActionCreators } from 'redux';
+import * as PartsActions from '../actions/parts';
 
-export default class HomePage extends Component {
-  render() {
-    return (
-      <Home />
-    );
-  }
+
+function mapStateToProps(state) {
+  return {
+    parts: state.parts
+  };
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(PartsActions, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import counter from './counter';
+import {reducer as formReducer} from 'redux-form';
+import parts from './parts';
 
 const rootReducer = combineReducers({
-  counter
+  parts,
+  form: formReducer
 });
 
 export default rootReducer;

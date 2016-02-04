@@ -1,0 +1,26 @@
+.container {
+  height: 100%;
+  width:100%;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.7)
+}
+
+.panel {
+  background-color: white;
+  color: black;
+  margin: 1%;
+  margin-top: 15%;
+  padding: 5%;
+}
+
+.closeBtn {
+  position: absolute;
+  display: block;
+  top: -25%;
+  right: -30px;
+  font-size: 20px;
+  color: coral;
+}
